@@ -21,9 +21,7 @@ A engenharia de prompts é a arte de formular instruções claras e precisas par
   - Estratégias para explorar as capacidades do Claude, seja na geração de conteúdo, resolução de problemas ou suporte à tomada de decisão.
 
 ## AWS: Bedrock e Step Functions
-
 ![Amazon AWS (Logo)](https://www.alura.com.br/artigos/assets/aws/aws.jpg)
-
 A segunda parte do bootcamp focou na utilização dos serviços AWS, que oferecem a infraestrutura e os recursos necessários para desenvolver, gerenciar e escalar aplicações de Inteligência Artificial.
 
 ### AWS Bedrock
@@ -51,6 +49,27 @@ A segunda parte do bootcamp focou na utilização dos serviços AWS, que oferece
 - **Aplicações Práticas**:
   - Desenvolvimento de workflows que interligam serviços como o Bedrock e outros componentes da AWS, facilitando a automação de processos.
   - Otimização de processos operacionais, reduzindo a necessidade de intervenções manuais e aumentando a confiabilidade dos sistemas.
+ 
+#### Amazon States Language (ASL)
+Dentro do contexto do AWS Step Functions, o **Amazon States Language (ASL)** é a ferramenta essencial para definir a lógica dos workflows. Baseado em **JSON**, o ASL permite descrever, de forma declarativa, a sequência de estados e transições que compõem um fluxo de trabalho.
+
+- **Componentes Principais**:
+  - **`StartAt`**: Define o estado inicial do fluxo.
+  - **`States`**: Conjunto de estados (como tarefas, escolhas, espera, paralelos) que compõem o workflow.
+  - **`Type`**: Especifica o tipo de cada estado (por exemplo, `Task`, `Choice`, `Wait`).
+  - **`Next`**: Indica o próximo estado a ser executado.
+  - **`End`**: Marca o fim do fluxo.
+
+- **Tipos de Estados Comuns**:
+  - **Task**: Executa uma ação específica, como invocar uma função Lambda.
+  - **Choice**: Permite fluxos condicionais baseados em regras.
+  - **Wait**: Insere uma pausa no fluxo por um tempo determinado.
+  - **Parallel**: Executa múltiplas tarefas simultaneamente.
+
+- **Benefícios**:
+  - **Automação sem servidor**: Facilita a orquestração de processos sem necessidade de infraestrutura dedicada.
+  - **Baixo código e declarativo**: A configuração em JSON torna o desenvolvimento intuitivo.
+  - **Monitoramento Integrado**: Acompanhe e debug workflows com integração ao AWS CloudWatch.
 
 ## Integração dos Conceitos
 Um dos grandes insights do bootcamp foi a demonstração prática de como a **engenharia de prompts** se torna ainda mais poderosa quando integrada à infraestrutura da AWS. Essa sinergia permite:
